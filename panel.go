@@ -169,8 +169,8 @@ type (
 			Thresholds struct {
 				Mode  string `json:"mode"`
 				Steps []struct {
-					Color string `json:"color"`
-					Value string `json:"value"`
+					Color string    `json:"color"`
+					Value IntString `json:"value"`
 				} `json:"steps"`
 			} `json:"thresholds"`
 			Links []Link `json:"links,omitempty"`

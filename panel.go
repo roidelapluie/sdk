@@ -165,14 +165,14 @@ type (
 	}
 	FieldConfig struct {
 		Defaults struct {
-			Unit      string `json:"unit"`
-			Threshold struct {
+			Unit       string `json:"unit"`
+			Thresholds struct {
 				Mode  string `json:"mode"`
 				Steps []struct {
 					Color string `json:"color"`
 					Value string `json:"value"`
 				} `json:"steps"`
-			} `json:"threshold"`
+			} `json:"thresholds"`
 			Links []Link `json:"links,omitempty"`
 		} `json:"defaults"`
 	}

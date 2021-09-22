@@ -117,7 +117,7 @@ type IntString struct {
 
 // UnmarshalJSON implements custom unmarshalling for IntString type
 func (v *IntString) UnmarshalJSON(raw []byte) error {
-	if raw == nil || bytes.Equal(raw, []byte(`"null"`)) || bytes.Equal(raw, []byte(`""`)) {
+	if raw == nil || bytes.Equal(raw, []byte(`"null"`)) || bytes.Equal(raw, []byte(`""`)) || bytes.Equal(raw, []byte(`null`)) {
 		return nil
 	}
 

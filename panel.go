@@ -358,7 +358,9 @@ type (
 		YBucketNumber *float64 `json:"yBucketNumber"`
 		YBucketSize   *float64 `json:"yBucketSize"`
 	}
-	CustomPanel map[string]interface{}
+	CustomPanel struct {
+		Fields map[string]interface{} `json:",inline"`
+	}
 )
 
 // for a graph panel
@@ -976,7 +978,7 @@ func (p *Panel) UnmarshalJSON(b []byte) (err error) {
 				p.RowPanel = &rowpanel
 			}
 		default:
-			var custom = make(CustomPanel)
+			var custom = CustomPanel{}
 			p.OfType = CustomType
 			if err = json.Unmarshal(b, &custom); err == nil {
 				p.CustomPanel = &custom

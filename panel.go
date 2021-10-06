@@ -224,8 +224,8 @@ type (
 		Scroll    bool          `json:"scroll"` // from grafana 3.x
 	}
 	TextPanel struct {
-		Content     string        `json:"content"`
-		Mode        string        `json:"mode"`
+		Content     string        `json:"content,omitempty"`
+		Mode        string        `json:"mode,omitempty"`
 		PageSize    uint          `json:"pageSize"`
 		Scroll      bool          `json:"scroll"`
 		ShowHeader  bool          `json:"showHeader"`

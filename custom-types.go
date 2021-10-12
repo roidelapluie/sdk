@@ -162,7 +162,7 @@ type FloatString struct {
 
 // UnmarshalJSON implements custom unmarshalling for FloatString type
 func (v *FloatString) UnmarshalJSON(raw []byte) error {
-	if raw == nil || bytes.Equal(raw, []byte(`"null"`)) || bytes.Equal(raw, []byte(`""`)) {
+	if raw == nil || bytes.Equal(raw, []byte(`"null"`)) || bytes.Equal(raw, []byte(`""`)) || bytes.Equal(raw, []byte(`null`)) {
 		return nil
 	}
 

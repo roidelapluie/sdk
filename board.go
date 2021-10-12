@@ -117,7 +117,9 @@ type (
 		IconColor   string            `json:"iconColor,omitempty"`
 		LineColor   string            `json:"lineColor,omitempty"`
 		IconSize    uint              `json:"iconSize,omitempty"`
-		Enable      bool              `json:"enable,omitempty"`
+		Enable      bool              `json:"enable"`
+		Hide        bool              `json:"hide"`
+		Limit       int               `json:"limit,omitempty"`
 		Query       string            `json:"query,omitempty"`
 		RawQuery    string            `json:"rawQuery,omitempty"`
 		Expr        string            `json:"expr,omitempty"`

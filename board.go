@@ -113,21 +113,22 @@ type (
 	Annotation struct {
 		Name        string            `json:"name"`
 		Datasource  *string           `json:"datasource"`
-		ShowLine    bool              `json:"showLine"`
-		IconColor   string            `json:"iconColor"`
-		LineColor   string            `json:"lineColor"`
-		IconSize    uint              `json:"iconSize"`
-		Enable      bool              `json:"enable"`
-		Query       string            `json:"query"`
-		Expr        string            `json:"expr"`
-		Step        string            `json:"step"`
-		TextField   string            `json:"textField"`
-		TextFormat  string            `json:"textFormat"`
-		TitleFormat string            `json:"titleFormat"`
-		TagsField   string            `json:"tagsField"`
-		Tags        StringSliceString `json:"tags"`
-		TagKeys     string            `json:"tagKeys"`
-		Type        string            `json:"type"`
+		ShowLine    bool              `json:"showLine,omitempty"`
+		IconColor   string            `json:"iconColor,omitempty"`
+		LineColor   string            `json:"lineColor,omitempty"`
+		IconSize    uint              `json:"iconSize,omitempty"`
+		Enable      bool              `json:"enable,omitempty"`
+		Query       string            `json:"query,omitempty"`
+		RawQuery    string            `json:"rawQuery,omitempty"`
+		Expr        string            `json:"expr,omitempty"`
+		Step        string            `json:"step,omitempty"`
+		TextField   string            `json:"textField,omitempty"`
+		TextFormat  string            `json:"textFormat,omitempty"`
+		TitleFormat string            `json:"titleFormat,omitempty"`
+		TagsField   string            `json:"tagsField,omitempty"`
+		Tags        StringSliceString `json:"tags,omitempty"`
+		TagKeys     string            `json:"tagKeys,omitempty"`
+		Type        string            `json:"type,omitempty"`
 	}
 	// Link represents link to another dashboard or external weblink
 	Link struct {

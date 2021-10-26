@@ -68,10 +68,10 @@ type (
 		Editable   bool    `json:"editable"`
 		Error      bool    `json:"error"`
 		GridPos    struct {
-			H *int `json:"h,omitempty"`
-			W *int `json:"w,omitempty"`
-			X *int `json:"x,omitempty"`
-			Y *int `json:"y,omitempty"`
+			H *float64 `json:"h,omitempty"`
+			W *float64 `json:"w,omitempty"`
+			X *float64 `json:"x,omitempty"`
+			Y *float64 `json:"y,omitempty"`
 		} `json:"gridPos,omitempty"`
 		Height           interface{} `json:"height,omitempty"` // general
 		HideTimeOverride *bool       `json:"hideTimeOverride,omitempty"`

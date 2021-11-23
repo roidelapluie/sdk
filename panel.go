@@ -74,7 +74,7 @@ type (
 			Y *float64 `json:"y,omitempty"`
 		} `json:"gridPos,omitempty"`
 		Height           interface{} `json:"height,omitempty"` // general
-		Transformations  interface{} `json:"transformations"`
+		Transformations  interface{} `json:"transformations,omitempty"`
 		HideTimeOverride *bool       `json:"hideTimeOverride,omitempty"`
 		ID               uint        `json:"id"`
 		IsNew            bool        `json:"isNew"`

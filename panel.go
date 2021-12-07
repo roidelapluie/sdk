@@ -405,6 +405,7 @@ type (
 		Dashes        *bool       `json:"dashes,omitempty"`
 		Fill          *int        `json:"fill,omitempty"`
 		FillBelowTo   *string     `json:"fillBelowTo,omitempty"`
+		HiddenSeries  *bool       `json:"hiddenSeries,omitempty"`
 		Legend        *bool       `json:"legend,omitempty"`
 		Lines         *bool       `json:"lines,omitempty"`
 		LineWidth     *int        `json:"linewidth,omitempty"`
